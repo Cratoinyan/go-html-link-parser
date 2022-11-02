@@ -9,6 +9,7 @@ import (
 
 func main() {
 	filePath := flag.String("file", "ex1.html", "html file that will be parsed")
+	flag.Parse()
 	reader, err := os.Open(*filePath)
 	if err != nil {
 		fmt.Errorf(err.Error())
